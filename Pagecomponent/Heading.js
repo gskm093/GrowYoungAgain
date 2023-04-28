@@ -5,27 +5,6 @@ import CommonHeading from './common/CommonHeading';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 
-const cards = [
-	{
-		time: 'SATURDAY & SUNDAY, 5:00PM - 6:00 PM',
-		title: 'FLAT 50% OFF ON ALL DRINKS',
-		subTitle: 'Get bombarded with our super vast game type collection',
-		image: '/images/framebg.svg',
-	},
-	{
-		time: 'SATURDAY & SUNDAY, 5:00PM - 6:00 PM',
-		title: 'FLAT 50% OFF ON ALL DRINKS',
-		subTitle: 'Get bombarded with our super vast game type collection',
-		image: '/images/framebg.svg',
-	},
-	{
-		time: 'SATURDAY & SUNDAY, 5:00PM - 6:00 PM',
-		title: 'FLAT 50% OFF ON ALL DRINKS',
-		subTitle: 'Get bombarded with our super vast game type collection',
-		image: '/images/framebg.svg',
-	},
-];
-
 function Heading() {
 	/**
 	 * We have declared the screen size according to devices
@@ -101,7 +80,7 @@ function Heading() {
 						*Table booking is only applicable for 21 year old or elder
 					</Typography>
 					<Box my={2}>
-						<HeadingCards cards={cards} />
+						<HeadingCards />
 					</Box>
 				</Stack>
 			</Stack>

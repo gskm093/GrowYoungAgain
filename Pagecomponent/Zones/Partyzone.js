@@ -1,29 +1,7 @@
 import { Box, Button, Stack } from '@mui/material';
-import CommonCarousal from '../common/CommonCarousal';
 import CommonHeading from '../common/CommonHeading';
 import Carousalcards from '../Cards/Carouselcards';
-import HeadingCards from '../Cards/HeadingCards';
 
-const cards = [
-	{
-		time: 'SATURDAY & SUNDAY, 5:00PM - 6:00 PM',
-		title: 'FLAT 50% OFF ON ALL DRINKS',
-		subTitle: 'Get bombarded with our super vast game type collection',
-		image: '/images/framebg.svg',
-	},
-	{
-		time: 'SATURDAY & SUNDAY, 5:00PM - 6:00 PM',
-		title: 'FLAT 50% OFF ON ALL DRINKS',
-		subTitle: 'Get bombarded with our super vast game type collection',
-		image: '/images/framebg.svg',
-	},
-	{
-		time: 'SATURDAY & SUNDAY, 5:00PM - 6:00 PM',
-		title: 'FLAT 50% OFF ON ALL DRINKS',
-		subTitle: 'Get bombarded with our super vast game type collection',
-		image: '/images/framebg.svg',
-	},
-];
 
 function Partyzone() {
 	return (
@@ -40,7 +18,6 @@ function Partyzone() {
 				imgName={'partyzonelogo'}
 				sub={'Get bombarded with our super vast game type collection'}
 			/>
-			{/* <CommonCarousal cards={cards} /> */}
 			<Stack
 				justifyContent={'center'}
 				sx={{

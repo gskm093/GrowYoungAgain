@@ -1,10 +1,8 @@
 import {
 	Box,
-	Button,
 	Card,
 	CardActions,
 	CardContent,
-	IconButton,
 	Stack,
 	Typography,
 } from '@mui/material';
@@ -21,7 +19,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import { Circle } from '@mui/icons-material';
 
-const Carousalcards = ({ cards }) => {
+const Carousalcards = () => {
 	const [imageIndex, setImageIndex] = useState(0);
 	const theme = useTheme();
 
@@ -76,7 +74,6 @@ const Carousalcards = ({ cards }) => {
 		nextArrow: <NextArrow onClick={undefined} />,
 		prevArrow: <PrevArrow onClick={undefined} />,
 		beforeChange: (current, next) => setImageIndex(next),
-		// dots: true,
 		responsive: [
 			{
 				breakpoint: 1024,
@@ -94,7 +91,6 @@ const Carousalcards = ({ cards }) => {
 					nextArrow: <NextArrow onClick={undefined} />,
 					prevArrow: <PrevArrow onClick={undefined} />,
 					beforeChange: (current, next) => setImageIndex(next),
-					// dots: true,
 				},
 			},
 
@@ -114,7 +110,6 @@ const Carousalcards = ({ cards }) => {
 					nextArrow: <NextArrow onClick={undefined} />,
 					prevArrow: <PrevArrow onClick={undefined} />,
 					beforeChange: (current, next) => setImageIndex(next),
-					// dots: true,
 				},
 			},
 
@@ -135,7 +130,6 @@ const Carousalcards = ({ cards }) => {
 					nextArrow: <NextArrow onClick={undefined} />,
 					prevArrow: <PrevArrow onClick={undefined} />,
 					beforeChange: (current, next) => setImageIndex(next),
-					// dots: true,
 				},
 			},
 		],
@@ -187,7 +181,6 @@ const Carousalcards = ({ cards }) => {
 
 	const tablet = useMediaQuery(theme.breakpoints.only('sm'));
 	const mobile = useMediaQuery(theme.breakpoints.only('xs'));
-	// const desktop = useMediaQuery(theme.breakpoints.up('md'));
 
 	return (
 		<>
@@ -228,7 +221,6 @@ const Carousalcards = ({ cards }) => {
 											objectFit: 'cover',
 											backgroundPosition: 'center',
 											backgroundRepeat: 'no-repeat',
-											// p: 2,
 									  }
 							}
 						>
@@ -307,25 +299,21 @@ const Carousalcards = ({ cards }) => {
 				}}
 			>
 				{cardContents?.map((e, index) => {
-					return (
-						// <IconButton size='small' sx={{backgroundColor:'#fff'}}>
-						index === imageIndex ? (
-							<Circle
-								sx={{
-									color: 'white',
-									fontSize: '16px',
-									mx: '2px',
-								}}
-							/>
-						) : (
-							<Circle
-								sx={{
-									color: 'white',
-									fontSize: '10px',
-								}}
-							/>
-						)
-						// </IconButton>
+					return index === imageIndex ? (
+						<Circle
+							sx={{
+								color: 'white',
+								fontSize: '16px',
+								mx: '2px',
+							}}
+						/>
+					) : (
+						<Circle
+							sx={{
+								color: 'white',
+								fontSize: '10px',
+							}}
+						/>
 					);
 				})}
 			</Stack>
